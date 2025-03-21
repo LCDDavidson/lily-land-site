@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "LilyLandBlazorSite",
   "resources": {
-    "hash": "sha256-azoTEmER+RPrUQ9fPoBxA7DewU2LO8r3j/zjy3kpwMQ=",
+    "hash": "sha256-Etq5IK59jgfRfoo7T0Mvi6GCxvv+PQdem7OwZrPo5Dg=",
     "jsModuleNative": {
       "dotnet.native.8.0.14.c2ae5877hi.js": "sha256-nVB+IIrEMZyzYc18/q6Ztgcx9N4PFM4b0KiWbViPINI="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "LilyLandBlazorSite.wasm": "sha256-AYm7c6FuOC/bKM43z4hoP0Hui+ayBXzEmv3xI+mttIo=",
+      "LilyLandBlazorSite.wasm": "sha256-z6Ir5qN5RFylf+201w6Z8dI0E//5XeQQOzWV/MtZyPo=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-4cf7q0QIuih0cVZzT3WDtPUR/bINebQq8KQgQ81vEaw=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-AJrpIWzNwCdksDByGDWBCnoNGa9TDk+P97lxr41mDpM=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-mwwNz/IMHU35BqhBaez63Z01g22S/iPHUXLcAMuyQL4=",
