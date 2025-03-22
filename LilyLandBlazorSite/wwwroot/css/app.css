@@ -1,3 +1,32 @@
+:root {
+    /* Base Palette - Lily of the Valley */
+    --LightBG: #CBCDCE;
+    --LightAccent: #9F80A6;
+    --MainColor: #598662;
+    --DarkAccent: #3B5339;
+    --DarkBG: #20211C;
+    --MainText: #212529;
+    --AccentText: white;
+}
+
+/* Alternative Palette - Tiger */
+[data-palette="tiger"] {
+    --LightBG: #F4F7F5;
+    --LightAccent: #B94254;
+    --MainColor: #C24C15;
+    --DarkAccent: #583A30;
+    --DarkBG: #2A1F28;
+}
+
+/* Alternative Palette - "Stargazer" */
+[data-palette="stargazer"] {
+    --LightBG: #D9D3C9;
+    --LightAccent: #5D7C1E;
+    --MainColor: #CD4E88;
+    --DarkAccent: #93667F;
+    --DarkBG: #090912;
+}
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -7,13 +36,13 @@ h1:focus {
 }
 
 a, .btn-link {
-    color: #0071c1;
+    color: var(--MainText);
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+    background-color: var(--LightBG);
+    border-color: var(--LightAccent);
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -84,5 +113,5 @@ a, .btn-link {
     }
 
 code {
-    color: #c02d76;
+    color: var(--LightAccent);
 }
