@@ -18,7 +18,7 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-       - name: Restore Dependencies
+      - name: Restore Dependencies
         run: dotnet restore LilyLandBlazorSite/LilyLandBlazorSite.sln
 
       - name: Build Project
