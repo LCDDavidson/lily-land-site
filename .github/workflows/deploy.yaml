@@ -1,0 +1,44 @@
+name: Build and Deploy .NET Site
+
+on:
+  push:
+    branches:
+      - main # Change this to your actual development branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x' # Adjust to match your project
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Build Project
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Publish Project
+        run: dotnet publish -c Release -o publish
+
+      - name: Organize Files for Deployment
+        run: |
+          mkdir -p temp_publish
+          mv publish/* temp_publish/ # Move everything out of publish
+          mv temp_publish/wwwroot/* temp_publish/ # Move contents of wwwroot to root
+          rm -rf temp_publish/wwwroot # Remove now-empty wwwroot directory
+          mv temp_publish/* .
+          rm -rf temp_publish
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: . # Deploy everything in root
+          publish_branch: Pages
