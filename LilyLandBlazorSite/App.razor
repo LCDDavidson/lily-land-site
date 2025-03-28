@@ -1,0 +1,28 @@
+﻿@inject NavigationManager Navigation
+
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@GetLayout()" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p role="alert">Sorry, nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+@code {
+    private Type GetLayout()
+    {
+        var relativeUri = Navigation.ToBaseRelativePath(Navigation.Uri).ToLower();
+
+        if (relativeUri.StartsWith("abel"))
+        {
+            return typeof(LilyLandBlazorSite.Abel.Layout.AbelLayout);
+        }
+
+        return typeof(MainLayout);
+    }
+}
