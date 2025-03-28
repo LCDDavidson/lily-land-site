@@ -9,11 +9,11 @@ main {
 }
 
 .sidebar {
-    background-image: linear-gradient(190deg, var(--DarkAccent) 50%, var(--LightAccent) 90%);
+    background-image: linear-gradient(0deg, var(--LightAccent), var(--MainColor), var(--DarkAccent) 95% );
 }
 
 .top-row {
-    background-color: var(--LightBG);
+    background-color: var(--DarkAccent);
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 :root {
     /* Base Palette - Lily of the Valley */
     --LightBG: #CBCDCE;
@@ -27,8 +29,19 @@
     --DarkBG: #090912;
 }
 
+/* Alternative Palette - "Abel" */
+[data-palette="abel"] {
+    --LightBG: #f8fbf7;
+    --LightAccent: #89cff0;
+    --MainColor: #f3a62b;
+    --DarkAccent: #db7d6c;
+    --DarkBG: #204a6c;
+    --MainText: #212529;
+    --AccentText: white;
+}
+
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Lato';
 }
 
 h1:focus {
